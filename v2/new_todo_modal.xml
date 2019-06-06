@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_rounded"
+    android:paddingStart="-10dp"
+    android:paddingBottom="20dp">
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="@string/createBasket"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_marginBottom="50dp"/>
+
+
+    <EditText
+        android:id="@+id/toDoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/todoTitle"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toDoTitle"
+        android:hint="@string/description"
+        android:textColorHint="@color/gray"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/black"
+        android:inputType="textMultiLine"/>
+
+    <CheckBox
+        android:id="@+id/notificationBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
+        android:buttonTint="@color/gray"
+        android:text="@string/notification"
+        android:textColor="@color/gray"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:id="@+id/dateScroll"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/notificationBox"
+        android:layout_alignStart="@+id/toDoTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone">
+
+        <DatePicker
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="0dp"
+            android:ems="10"
+            android:background="@drawable/pink_gradient"
+            android:focusable="false"
+            android:hint="@string/notifyDate"
+            android:textColorHint="@color/gray"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"/>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/createTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateScroll"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:text="@string/create"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        style="?android:attr/borderlessButtonStyle"/>
+
+
+</RelativeLayout>
